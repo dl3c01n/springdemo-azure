@@ -3,7 +3,7 @@ name: Linux Container Node Workflow
 on: [push]
 
 jobs:
-  
+
   build:
     runs-on: ubuntu-latest
 
@@ -15,5 +15,5 @@ jobs:
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
     - run: |
-        docker build . -t springsh.azurecr.io/springsh:${{ github.sha }}
+        docker build ./student-service/ -t springsh.azurecr.io/springsh:${{ github.sha }}
         docker push springsh.azurecr.io/springsh:${{ github.sha }}  

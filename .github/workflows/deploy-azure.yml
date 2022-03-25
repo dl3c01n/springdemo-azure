@@ -14,7 +14,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
     - run: |
         docker build -t registry.hub.docker.com/dl3c01n/spring-sh ./student-service/
-        docker push dl3c01n/spring-sh:latest
+        docker push registry.hub.docker.com/dl3c01n/spring-sh:latest
     - uses: azure/webapps-deploy@v2
       with:
         app-name: 'springsh'

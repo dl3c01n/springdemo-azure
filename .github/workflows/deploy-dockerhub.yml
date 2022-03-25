@@ -20,3 +20,4 @@ jobs:
         with:
           push: true
           tags: dl3c01n/spring-sh:latest
+          context: ./student-service/

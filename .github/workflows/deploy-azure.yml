@@ -19,4 +19,4 @@ jobs:
       with:
         app-name: 'springsh'
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-        images: 'registry.hub.docker.com/dl3c01n/spring-sh'
+        images: 'registry.hub.docker.com/dl3c01n/spring-sh:latest'
